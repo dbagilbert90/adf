@@ -20,7 +20,7 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*",
+							"wildcardFileName": "*.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -82,7 +82,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "source",
+						"referenceName": "del_sourceFiles",
 						"type": "DatasetReference"
 					},
 					"logStorageSettings": {
@@ -95,7 +95,7 @@
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
 						"recursive": true,
-						"wildcardFileName": "*",
+						"wildcardFileName": "*.csv",
 						"enablePartitionDiscovery": false
 					}
 				}
