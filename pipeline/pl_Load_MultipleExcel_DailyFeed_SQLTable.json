@@ -91,7 +91,7 @@
 						"SheetName": "Product"
 					},
 					{
-						"SheetName": "Orders"
+						"SheetName": "Order"
 					}
 				]
 			}
