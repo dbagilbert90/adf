@@ -1,9 +1,9 @@
 {
-	"name": "pl_copyFiles_RemoveFiles",
+	"name": "pl_load_empFiles_empDB",
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "copy_empFiles_empTable",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -20,7 +20,69 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*.csv",
+							"wildcardFileName": "Emp*.txt",
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "truncate table dbo.emp",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "emp_source",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "emp_destination_table",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "copy_empFiles_Archive",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "copy_empFiles_empTable",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"wildcardFileName": "Emp*.txt",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -50,23 +112,23 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "source",
+						"referenceName": "emp_source",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "Archive",
+						"referenceName": "emp_archive",
 						"type": "DatasetReference"
 					}
 				]
 			},
 			{
-				"name": "Delete1",
+				"name": "Delete_SourceFile",
 				"type": "Delete",
 				"dependsOn": [
 					{
-						"activity": "Copy data1",
+						"activity": "copy_empFiles_Archive",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -82,12 +144,12 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "del_sourceFiles",
+						"referenceName": "emp_source",
 						"type": "DatasetReference"
 					},
 					"logStorageSettings": {
 						"linkedServiceName": {
-							"referenceName": "tbstorage",
+							"referenceName": "gan_practice_source",
 							"type": "LinkedServiceReference"
 						}
 					},
@@ -95,7 +157,7 @@
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
 						"recursive": true,
-						"wildcardFileName": "*.csv",
+						"wildcardFileName": "Emp*.txt",
 						"enablePartitionDiscovery": false
 					}
 				}

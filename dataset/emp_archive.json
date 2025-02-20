@@ -1,8 +1,8 @@
 {
-	"name": "Archive",
+	"name": "emp_archive",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "tbstorage",
+			"referenceName": "gan_practice_source",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "archieve",
-				"container": "tbstorage"
+				"folderPath": "emp_archive",
+				"container": "ganpractice"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

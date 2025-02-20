@@ -1,0 +1,16 @@
+{
+	"name": "emp_destination_table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "gan_practice_destination",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "emp"
+		}
+	}
+}
