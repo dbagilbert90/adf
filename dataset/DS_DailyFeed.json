@@ -1,0 +1,24 @@
+{
+	"name": "DS_DailyFeed",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "GAN_DB",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SheetName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().SheetName",
+				"type": "Expression"
+			}
+		}
+	}
+}

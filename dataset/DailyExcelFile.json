@@ -1,0 +1,30 @@
+{
+	"name": "DailyExcelFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "gan_practice_source",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SheetName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": {
+				"value": "@dataset().SheetName",
+				"type": "Expression"
+			},
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "daily_feed_02202025.xlsx",
+				"folderPath": "DailyExcelFeed",
+				"container": "ganpractice"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
