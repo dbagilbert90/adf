@@ -1,0 +1,23 @@
+{
+	"name": "emp_archive",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "gan_practice_source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "emp_archive",
+				"container": "ganpractice"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
