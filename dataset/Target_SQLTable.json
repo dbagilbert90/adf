@@ -1,0 +1,24 @@
+{
+	"name": "Target_SQLTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "GAN_DB",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"dsTableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().dsTableName",
+				"type": "Expression"
+			}
+		}
+	}
+}
