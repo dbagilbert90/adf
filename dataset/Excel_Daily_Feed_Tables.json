@@ -1,0 +1,24 @@
+{
+	"name": "Excel_Daily_Feed_Tables",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "GAN_DB",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"dsTable": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().dsTable",
+				"type": "Expression"
+			}
+		}
+	}
+}
