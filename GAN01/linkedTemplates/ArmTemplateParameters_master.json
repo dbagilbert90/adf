@@ -5,6 +5,39 @@
 		"factoryName": {
 			"value": "GAN01"
 		},
+		"GAN_DB_password": {
+			"value": ""
+		},
+		"gan_practice_destination_password": {
+			"value": ""
+		},
+		"gan_practice_source_connectionString": {
+			"value": ""
+		},
+		"tbstorage_connectionString": {
+			"value": ""
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://GAN.vault.azure.net/"
+		},
+		"GAN_DB_properties_typeProperties_server": {
+			"value": "0909Server.database.windows.net"
+		},
+		"GAN_DB_properties_typeProperties_database": {
+			"value": "DBA90"
+		},
+		"GAN_DB_properties_typeProperties_userName": {
+			"value": "gilbert0909"
+		},
+		"gan_practice_destination_properties_typeProperties_server": {
+			"value": "0909Server.database.windows.net"
+		},
+		"gan_practice_destination_properties_typeProperties_database": {
+			"value": "DBA90"
+		},
+		"gan_practice_destination_properties_typeProperties_userName": {
+			"value": "gilbert0909"
+		},
 		"containerUri": {
 			"value": ""
 		},

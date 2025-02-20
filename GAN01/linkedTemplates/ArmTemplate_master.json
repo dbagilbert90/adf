@@ -7,6 +7,50 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "GAN01"
 		},
+		"GAN_DB_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'GAN_DB'"
+		},
+		"gan_practice_destination_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'gan_practice_destination'"
+		},
+		"gan_practice_source_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'gan_practice_source'"
+		},
+		"tbstorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'tbstorage'"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://GAN.vault.azure.net/"
+		},
+		"GAN_DB_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "0909Server.database.windows.net"
+		},
+		"GAN_DB_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "DBA90"
+		},
+		"GAN_DB_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "gilbert0909"
+		},
+		"gan_practice_destination_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "0909Server.database.windows.net"
+		},
+		"gan_practice_destination_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "DBA90"
+		},
+		"gan_practice_destination_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "gilbert0909"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -33,6 +77,39 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"GAN_DB_password": {
+						"value": "[parameters('GAN_DB_password')]"
+					},
+					"gan_practice_destination_password": {
+						"value": "[parameters('gan_practice_destination_password')]"
+					},
+					"gan_practice_source_connectionString": {
+						"value": "[parameters('gan_practice_source_connectionString')]"
+					},
+					"tbstorage_connectionString": {
+						"value": "[parameters('tbstorage_connectionString')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"GAN_DB_properties_typeProperties_server": {
+						"value": "[parameters('GAN_DB_properties_typeProperties_server')]"
+					},
+					"GAN_DB_properties_typeProperties_database": {
+						"value": "[parameters('GAN_DB_properties_typeProperties_database')]"
+					},
+					"GAN_DB_properties_typeProperties_userName": {
+						"value": "[parameters('GAN_DB_properties_typeProperties_userName')]"
+					},
+					"gan_practice_destination_properties_typeProperties_server": {
+						"value": "[parameters('gan_practice_destination_properties_typeProperties_server')]"
+					},
+					"gan_practice_destination_properties_typeProperties_database": {
+						"value": "[parameters('gan_practice_destination_properties_typeProperties_database')]"
+					},
+					"gan_practice_destination_properties_typeProperties_userName": {
+						"value": "[parameters('gan_practice_destination_properties_typeProperties_userName')]"
 					}
 				}
 			},
