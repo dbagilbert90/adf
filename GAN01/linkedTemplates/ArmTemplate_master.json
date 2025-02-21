@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "GAN01"
 		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
 		"GAN_DB_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'GAN_DB'"
@@ -23,13 +27,21 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'tbstorage'"
 		},
-		"AzureSqlDatabase1_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
-		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://GAN.vault.azure.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "0909server.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "DBA90"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "gilbert0909"
 		},
 		"GAN_DB_properties_typeProperties_server": {
 			"type": "string",
@@ -52,18 +64,6 @@
 			"defaultValue": "DBA90"
 		},
 		"gan_practice_destination_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "gilbert0909"
-		},
-		"AzureSqlDatabase1_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "0909server.database.windows.net"
-		},
-		"AzureSqlDatabase1_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "DBA90"
-		},
-		"AzureSqlDatabase1_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "gilbert0909"
 		},
@@ -94,6 +94,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
 					"GAN_DB_password": {
 						"value": "[parameters('GAN_DB_password')]"
 					},
@@ -106,11 +109,17 @@
 					"tbstorage_connectionString": {
 						"value": "[parameters('tbstorage_connectionString')]"
 					},
-					"AzureSqlDatabase1_password": {
-						"value": "[parameters('AzureSqlDatabase1_password')]"
-					},
 					"AzureKeyVault1_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
 					},
 					"GAN_DB_properties_typeProperties_server": {
 						"value": "[parameters('GAN_DB_properties_typeProperties_server')]"
@@ -129,15 +138,6 @@
 					},
 					"gan_practice_destination_properties_typeProperties_userName": {
 						"value": "[parameters('gan_practice_destination_properties_typeProperties_userName')]"
-					},
-					"AzureSqlDatabase1_properties_typeProperties_server": {
-						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
-					},
-					"AzureSqlDatabase1_properties_typeProperties_database": {
-						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
-					},
-					"AzureSqlDatabase1_properties_typeProperties_userName": {
-						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
 					}
 				}
 			},

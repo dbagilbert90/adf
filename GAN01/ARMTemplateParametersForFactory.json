@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "GAN01"
 		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
 		"GAN_DB_password": {
 			"value": ""
 		},
@@ -17,11 +20,17 @@
 		"tbstorage_connectionString": {
 			"value": ""
 		},
-		"AzureSqlDatabase1_password": {
-			"value": ""
-		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://GAN.vault.azure.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "0909server.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "DBA90"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "gilbert0909"
 		},
 		"GAN_DB_properties_typeProperties_server": {
 			"value": "0909Server.database.windows.net"
@@ -39,15 +48,6 @@
 			"value": "DBA90"
 		},
 		"gan_practice_destination_properties_typeProperties_userName": {
-			"value": "gilbert0909"
-		},
-		"AzureSqlDatabase1_properties_typeProperties_server": {
-			"value": "0909server.database.windows.net"
-		},
-		"AzureSqlDatabase1_properties_typeProperties_database": {
-			"value": "DBA90"
-		},
-		"AzureSqlDatabase1_properties_typeProperties_userName": {
 			"value": "gilbert0909"
 		}
 	}
