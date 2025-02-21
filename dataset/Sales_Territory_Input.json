@@ -1,0 +1,23 @@
+{
+	"name": "Sales_Territory_Input",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "gan_practice_source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Sales_Territory_Input",
+				"container": "ganpractice"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
