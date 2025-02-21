@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select SheetName from SheetName",
+						"sqlReaderQuery": "select SheetName from ExcelSheetName",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -66,22 +66,7 @@
 										"enablePartitionDiscovery": false
 									}
 								},
-								"sink": {
-									"type": "AzureSqlSink",
-									"writeBehavior": "insert",
-									"sqlWriterUseTableLock": false,
-									"tableOption": "autoCreate",
-									"disableMetricsCollection": false
-								},
-								"enableStaging": false,
-								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
-								}
+								"enableStaging": false
 							},
 							"inputs": [
 								{
@@ -89,18 +74,6 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"dsSheetName": {
-											"value": "@item().SheetName",
-											"type": "Expression"
-										}
-									}
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "LoadExcelSheets",
-									"type": "DatasetReference",
-									"parameters": {
-										"dsTableName": {
 											"value": "@item().SheetName",
 											"type": "Expression"
 										}
