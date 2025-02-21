@@ -17,6 +17,9 @@
 		"tbstorage_connectionString": {
 			"value": ""
 		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
 		"AzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://GAN.vault.azure.net/"
 		},
@@ -36,6 +39,15 @@
 			"value": "DBA90"
 		},
 		"gan_practice_destination_properties_typeProperties_userName": {
+			"value": "gilbert0909"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "0909server.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "DBA90"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
 			"value": "gilbert0909"
 		}
 	}
