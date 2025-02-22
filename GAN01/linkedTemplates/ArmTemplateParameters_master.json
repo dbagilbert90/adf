@@ -8,6 +8,9 @@
 		"AzureSqlDatabase1_password": {
 			"value": ""
 		},
+		"DBA90SQL_password": {
+			"value": ""
+		},
 		"GAN_DB_password": {
 			"value": ""
 		},
@@ -30,6 +33,15 @@
 			"value": "DBA90"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "gilbert0909"
+		},
+		"DBA90SQL_properties_typeProperties_server": {
+			"value": "0909server.database.windows.net"
+		},
+		"DBA90SQL_properties_typeProperties_database": {
+			"value": "DBA90"
+		},
+		"DBA90SQL_properties_typeProperties_userName": {
 			"value": "gilbert0909"
 		},
 		"GAN_DB_properties_typeProperties_server": {
