@@ -1,0 +1,16 @@
+{
+	"name": "load_CustomerFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DBA90SQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CustomerInfo"
+		}
+	}
+}
