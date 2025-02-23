@@ -1,0 +1,20 @@
+{
+	"name": "ProductSales_jason",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "gan_practice_source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ProductSubCategory_arry",
+				"folderPath": "ProductSubCategory_jason",
+				"container": "ganpractice"
+			}
+		},
+		"schema": {}
+	}
+}
