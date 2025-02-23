@@ -1,0 +1,12 @@
+{
+	"name": "con_SQL_LogTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DBA90SQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
