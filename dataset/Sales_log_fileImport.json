@@ -1,0 +1,40 @@
+{
+	"name": "Sales_log_fileImport",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "gan_practice_source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Sales_Log_Feed",
+				"container": "ganpractice"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ProductKey",
+				"type": "String"
+			},
+			{
+				"name": "OrderQuantity",
+				"type": "String"
+			},
+			{
+				"name": "OrderDate",
+				"type": "String"
+			},
+			{
+				"name": "UnitPrice",
+				"type": "String"
+			}
+		]
+	}
+}
