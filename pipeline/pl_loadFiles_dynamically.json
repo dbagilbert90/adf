@@ -149,7 +149,7 @@
 											"value": "@pipeline().TriggerTime",
 											"type": "Expression"
 										},
-										"type": "DateTime"
+										"type": "Datetime"
 									},
 									"Pipeline_name": {
 										"value": {
@@ -160,7 +160,7 @@
 									},
 									"RowCnt": {
 										"value": {
-											"value": "@item().Recordcount",
+											"value": "@activity('Copy data1').output.rowsCopied",
 											"type": "Expression"
 										},
 										"type": "Int32"
