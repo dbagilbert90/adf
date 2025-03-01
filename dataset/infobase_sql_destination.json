@@ -1,8 +1,8 @@
 {
-	"name": "emp_destination_table",
+	"name": "infobase_sql_destination",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "gan_practice_destination",
+			"referenceName": "DBA90SQL",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,7 +10,7 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "DimEmployee_Dest"
+			"table": "DimEmployee"
 		}
 	}
 }
