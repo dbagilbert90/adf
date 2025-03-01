@@ -12,9 +12,6 @@
 				"type": "AzureBlobFSLocation",
 				"folderPath": "Output",
 				"fileSystem": "ganpractice"
-			},
-			"compression": {
-				"type": "ZipDeflate"
 			}
 		}
 	}
