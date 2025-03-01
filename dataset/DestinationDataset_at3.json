@@ -1,0 +1,21 @@
+{
+	"name": "DestinationDataset_at3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "archive",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Output",
+				"fileSystem": "ganpractice"
+			},
+			"compression": {
+				"type": "ZipDeflate"
+			}
+		}
+	}
+}
