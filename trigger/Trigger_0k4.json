@@ -1,0 +1,30 @@
+{
+	"name": "Trigger_0k4",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Copy_files_to_destination_with_year_month_day",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"windowStart": {
+						"type": "Expression",
+						"value": "@trigger().scheduledTime"
+					}
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 3,
+				"startTime": "2025-03-08T06:22:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
