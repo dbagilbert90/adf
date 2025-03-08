@@ -60,7 +60,10 @@
 						"referenceName": "DestinationDataset_0k4",
 						"type": "DatasetReference",
 						"parameters": {
-							"cw_folderPath": "@{formatDateTime(pipeline().parameters.windowStart,'yyyy')}/@{formatDateTime(pipeline().parameters.windowStart,'MMMM')}/@{formatDateTime(pipeline().parameters.windowStart,'dddd')}"
+							"cw_folderPath": {
+								"value": "pipeline().parameters.windowStart@{formatDateTime(pipeline().parameters.windowStart,'yyyy')}/@{formatDateTime(pipeline().parameters.windowStart,'MMMM')}/@{formatDateTime(pipeline().parameters.windowStart,'dddd')}",
+								"type": "Expression"
+							}
 						}
 					}
 				]
