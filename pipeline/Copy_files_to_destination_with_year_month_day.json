@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_0k4",
+				"name": "Copy_files_to_destination_with_year_month_day",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
