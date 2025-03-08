@@ -69,7 +69,7 @@
 		"parameters": {
 			"windowStart": {
 				"type": "String",
-				"defaultValue": "formatDateTime(string(trigger().scheduledTime))"
+				"defaultValue": "formatDateTime(trigger().scheduledTime, 'yyyy-MM-ddTHH:mm:ssZ')"
 			}
 		},
 		"annotations": []
