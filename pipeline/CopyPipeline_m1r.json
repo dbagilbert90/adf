@@ -68,7 +68,11 @@
 		],
 		"parameters": {
 			"windowStart": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": {
+					"type": "Expression",
+					"value": "@trigger().scheduledTime"
+				}
 			}
 		},
 		"annotations": []
