@@ -1,0 +1,17 @@
+{
+	"name": "SourceDataset_m1r",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "gan_practice_source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "inputfiles"
+			}
+		}
+	}
+}
