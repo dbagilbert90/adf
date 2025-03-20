@@ -1,0 +1,17 @@
+{
+	"name": "input_employee_table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DBA90SQL",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"emp_table_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
