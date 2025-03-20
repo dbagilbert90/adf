@@ -1,5 +1,5 @@
 {
-	"name": "pl_create_load_table_base_on_file_name",
+	"name": "pl_create_table_and_load_table_dynamcally_and send_email",
 	"properties": {
 		"activities": [
 			{
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "emp_table_files",
+						"referenceName": "input_table",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -73,45 +73,12 @@
 										"type": "DelimitedTextReadSettings"
 									}
 								},
-								"sink": {
-									"type": "AzureSqlSink",
-									"writeBehavior": "insert",
-									"sqlWriterUseTableLock": false,
-									"tableOption": "autoCreate",
-									"disableMetricsCollection": false
-								},
-								"enableStaging": false,
-								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
-								}
+								"enableStaging": false
 							},
 							"inputs": [
 								{
-									"referenceName": "input_files",
-									"type": "DatasetReference",
-									"parameters": {
-										"FileName": {
-											"value": "@item().name",
-											"type": "Expression"
-										}
-									}
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "AzureSqlTable2",
-									"type": "DatasetReference",
-									"parameters": {
-										"TableName": {
-											"value": "@concat(substring(item().name,1,3),'_01')",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "input_table_file",
+									"type": "DatasetReference"
 								}
 							]
 						}
